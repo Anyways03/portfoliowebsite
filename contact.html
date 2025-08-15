@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-page="contact">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Anvay</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="fade">
+  <header class="nav">
+    <a class="logo" href="index.html">Anvay Edits</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="section container reveal">
+    <h1 class="section-title">Let’s work together</h1>
+    <div class="form-wrap glass">
+      <form class="form" onsubmit="return sendMessage(event)">
+        <label>Name <input required type="text" placeholder="Your name"></label>
+        <label>Email <input required type="email" placeholder="you@example.com"></label>
+        <label>Message <textarea rows="5" required placeholder="Tell me about your project"></textarea></label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <aside class="contact-aside">
+        <h3>Direct</h3>
+        <p class="muted">Email: <a href="mailto:hello@anvay.work">hello@anvay.work</a></p>
+        <p class="muted">Location: India (IST)</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">© 2025 Anvay Suvidya Atre</footer>
+</body>
+</html>

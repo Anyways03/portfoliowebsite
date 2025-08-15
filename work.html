@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work - Video Portfolio</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0d0d0d;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .video-wrapper {
+            margin-bottom: 30px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards;
+            display: flex;
+            justify-content: center;
+            background: black;
+        }
+
+        .video-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba(0, 123, 255, 0.4);
+        }
+
+        /* Fixed sizes */
+        .video-horizontal {
+            width: 100%;
+            max-width: 800px;
+            height: 450px; /* 16:9 */
+        }
+
+        .video-vertical {
+            width: 100%;
+            max-width: 400px;
+            height: 711px; /* 9:16 */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-horizontal,
+            .video-vertical {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Work</h1>
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back</button>
+    </header>
+
+    <div class="container">
+        <div class="video-wrapper">
+            <video src="videos/video1.mp4" class="video-horizontal" controls></video>
+        </div>
+        <div class="video-wrapper">
+            <video src="videos/video2.mp4" class="video-vertical" controls></video>
+        </div>
+        <div class="video-wrapper">
+            <video src="videos/video3.mp4" class="video-horizontal" controls></video>
+        </div>
+    </div>
+</body>
+</html>
