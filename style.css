@@ -27,7 +27,7 @@ body{
 
 body {
     position: relative;
-    background: url('images/premiere-bg.jpg') no-repeat center top;
+    background: url('premiere-bg.jpg') no-repeat center top;
     background-size: 100%;
     background-attachment: scroll; /* <-- Moves with scroll */
 }
@@ -214,3 +214,4 @@ nav a.active {
 }
 
 }
+
